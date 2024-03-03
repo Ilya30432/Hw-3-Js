@@ -1,15 +1,6 @@
 const yers = prompt("Сколько вам лет?");
-if(yers === null){
-    alert("Вы не захотели вести возраст!");
-} else{
-    const city = prompt("В каком городе вы живете?");
-    if(city === null){
-        alert("Вы не захотели вести город!");
-    } else{
-        const sport = prompt("Какой у вас любимый вид спорта?");
-        if(sport === null){
-            alert("Вы не захотели вести cвой любимый вид спорта!");
-        } else{
+const city = prompt("В каком городе вы живете?");
+const sport = prompt("Какой у вас любимый вид спорта?");
             let land ;
                 switch(city){
                 case "Киев":
@@ -38,12 +29,19 @@ if(yers === null){
                 default:
                 sport1 = `Твой любимый вид спорта  ${sport}`;
             };
-alert(`Тебе ${yers} лет
+
+if(!yers){
+    alert("Вы не захотели вести возраст!");
+} else if (!city){
+    alert("Вы не захотели вести город!");
+} else if (!sport){
+    alert("Вы не захотели вести cпорт!");
+}else{
+    alert(`
+    Тебе ${yers}
     ${land}
     ${sport1}
     `);
-        };
-    };
 };
 
 
